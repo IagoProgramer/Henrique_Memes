@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Site com Funções Automáticas</title>
+    <script>
+        // Função para abrir várias abas
+        function abrirAbas() {
+            for (let i = 0; i < 5; i++) {
+                window.open('https://youtu.be/NMIXFFoVAL4?feature=shared', '_blank');
+            }
+        }
+
+        // Função para reproduzir som
+        function reproduzirSom() {
+            let audio = new Audio('grito.mp3'); // Substitua pelo caminho do arquivo de som
+            audio.loop = true;
+            audio.play();
+        }
+
+        // Função para baixar imagem
+        function baixarImagem() {
+            const link = document.createElement('a');
+            link.href = 'img.jpg'; // Substitua pelo caminho da imagem desejada
+            link.download = 'trojan.exe'; // Nome do arquivo ao ser baixado
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Função para executar todas as ações automaticamente ao carregar a página
+        window.onload = function () {
+            abrirAbas();
+            reproduzirSom();
+            baixarImagem();
+            baixarImagem();
+            baixarImagem();
+            baixarImagem();
+            baixarImagem();
+            baixarImagem();
+  
+
+        };
+    </script>
+</head>
+<body>
+    <h1>Bem-vindo ao Site Experimental</h1>
+</body>
+</html>
